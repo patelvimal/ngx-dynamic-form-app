@@ -1,1 +1,7 @@
-<input-editor></input-editor>
+<form class="dynamic-form row" [formGroup]="form" *ngIf="config.fields.length > 0">
+    <div *ngFor="let field of config.fields;">
+      <ng-container dynamicField [config]="field" [formGroup]="form" >
+      </ng-container>
+      <!-- <dynamic-component [config]="field" [formGroup]="form"></dynamic-component> -->
+    </div>
+  </form>

@@ -1,6 +1,6 @@
 import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { debug } from 'console';
+import { BaseControlComponent } from '../base.component';
 import { quillConfiguration } from './input-editor.configuration';
 
 @Component({
@@ -8,10 +8,13 @@ import { quillConfiguration } from './input-editor.configuration';
   templateUrl: './input-editor.component.html',
   styleUrls: ['./input-editor.component.scss']
 })
-export class InputEditorComponent implements OnInit {
+export class InputEditorComponent extends BaseControlComponent implements OnInit {
   descriptionControl: FormControl;
   editorOptions = quillConfiguration;
-  constructor() { }
+  
+  constructor() { 
+    super();
+  }
 
   ngOnInit(): void {
     this.descriptionControl = new FormControl();

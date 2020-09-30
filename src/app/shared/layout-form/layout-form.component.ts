@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormConfig } from '../models/formConfig';
 
 @Component({
   selector: 'layout-form',
@@ -6,10 +8,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout-form.component.scss']
 })
 export class LayoutFormComponent implements OnInit {
+  @Input()
+  config: FormConfig;
+  form: FormGroup;
 
-  constructor() { }
+  constructor(private fb: FormBuilder ) { }
 
   ngOnInit(): void {
+    this.form = this.createFormGroup();
   }
 
+
+  private createFormGroup = () => {
+    if (this.config && this.config.fields.length > 0) {
+      const group = this.fb.group({});
+      this.config.fields.forEach(control => {
+        group.addControl(control.name, this.createControl());
+      });
+      return group;
+    }
+  }
+
+  private createControl = () => {
+    return new FormControl();
+  }
 }
