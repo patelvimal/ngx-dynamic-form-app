@@ -15,7 +15,7 @@ export class AppComponent {
     constructor() {
         const myTextBox: FormField = {
             label: 'Name',
-            name: 'name',
+            name: 'firstName',
             value:'',
             type: FieldType.TextBox
         };

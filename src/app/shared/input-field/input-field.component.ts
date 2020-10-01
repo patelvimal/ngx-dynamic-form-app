@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { BaseControlComponent } from '../base.component';
 
 @Component({
@@ -6,13 +7,15 @@ import { BaseControlComponent } from '../base.component';
   templateUrl: './input-field.component.html',
   styleUrls: ['./input-field.component.scss']
 })
-export class InputFieldComponent extends BaseControlComponent implements OnInit {
+export class InputFieldComponent extends BaseControlComponent  {
 
-  constructor() { 
-    super();
+  constructor(fb: FormBuilder) { 
+    super(fb);
   }
 
-  ngOnInit(): void {
-  }
+  onSave=()=> {
+    debugger;
 
+  }
+  
 }

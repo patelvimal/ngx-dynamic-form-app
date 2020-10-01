@@ -1,9 +1,4 @@
-<quill-editor class="content-editor" 
-    [modules]="editorOptions" 
-    [formControl]="descriptionControl" 
-    [placeholder]="''"
-    (onEditorCreated)="editorCreated($event)">
-</quill-editor>
-<div>
-    <button (click)="saveField($event)">Save</button>
+<div class="example-full-width" [formGroup]="group">
+    <quill-editor class="content-editor" [modules]="editorOptions" [formControlName]="name" [placeholder]="''">
+    </quill-editor>
 </div>

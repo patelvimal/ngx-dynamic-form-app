@@ -1,5 +1,6 @@
 import { ComponentFactoryResolver, ComponentRef, Directive, Input, ViewContainerRef } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { BaseControlComponent } from '../base.component';
 import { InputEditorComponent } from '../input-editor/input-editor.component';
 import { InputFieldComponent } from '../input-field/input-field.component';
 import { FieldType } from '../models/fieldType';
@@ -22,7 +23,7 @@ export class DynamicFieldDirective {
     }
 
     private createComponent = () => {
-        const componentFactory = this.resolver.resolveComponentFactory(this.getComponent(this.config.type));
+        const componentFactory = this.resolver.resolveComponentFactory<BaseControlComponent>(this.getComponent(this.config.type));
         var component = this.container.createComponent(componentFactory);
         component.instance.label = this.config.label;
         component.instance.name = this.config.name;

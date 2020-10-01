@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { QuillModule } from 'ngx-quill';
 import { DynamicFieldDirective } from './dynamic-field/dynamic-field.directive';
 import { InputEditorComponent } from './input-editor/input-editor.component';
@@ -13,7 +14,8 @@ import { LayoutFormComponent } from './layout-form/layout-form.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    MatInputModule ,
+    MatInputModule,
+    MatButtonModule,
     QuillModule.forRoot()  
   ],
   exports :[

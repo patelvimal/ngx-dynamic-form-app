@@ -16,6 +16,7 @@ export class LayoutFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.createFormGroup();
+    console.log(this.form);
   }
 
 
@@ -32,4 +33,10 @@ export class LayoutFormComponent implements OnInit {
   private createControl = () => {
     return new FormControl();
   }
+
+  public onSave = ()=> {
+    debugger;
+    console.log(this.form);
+  }
+
 }
