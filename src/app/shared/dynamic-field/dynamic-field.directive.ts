@@ -3,6 +3,7 @@ import { FormGroup } from '@angular/forms';
 import { BaseControlComponent } from '../base.component';
 import { InputEditorComponent } from '../input-editor/input-editor.component';
 import { InputFieldComponent } from '../input-field/input-field.component';
+import { ListViewComponent } from '../list-view/list-view.component';
 import { FieldType } from '../models/fieldType';
 import { FormField } from '../models/formField';
 
@@ -30,6 +31,9 @@ export class DynamicFieldDirective {
         component.instance.type = this.config.type;
         component.instance.value = this.config.value;
         component.instance.group = this.formGroup;
+        component.instance.options = this.config.options;
+        component.instance.selectMultiple = this.config.selectMultiple;
+        
     }
 
     private getComponent = (type: FieldType) => {
@@ -39,6 +43,9 @@ export class DynamicFieldDirective {
                 break;
             case FieldType.Editor:
                 return InputEditorComponent;
+                break;
+            case FieldType.ListView:
+                return ListViewComponent;
                 break;
             default:
                 break;

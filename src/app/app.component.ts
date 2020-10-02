@@ -25,9 +25,17 @@ export class AppComponent {
             value:'',
             type: FieldType.Editor
         }
+        const myList: FormField = {
+            label: 'Categories',
+            name: 'categories',
+            value:'',
+            type: FieldType.ListView,
+            selectMultiple: true,
+            options: ['Sunday','Monday','Tuesday']
+        }
         this.formConfiguration = {
             formName: "Sample Form",
-            fields: [myTextBox,myEditor],
+            fields: [myTextBox,myList,myEditor],
             actions: []
         }
     }

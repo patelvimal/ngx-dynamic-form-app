@@ -3,5 +3,6 @@ export enum FieldType {
     TextArea,
     Editor,
     Dropdown,
-    Radio
+    Radio,
+    ListView
 }

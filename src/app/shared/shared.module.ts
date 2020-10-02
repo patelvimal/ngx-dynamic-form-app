@@ -7,6 +7,7 @@ import { InputEditorComponent } from './input-editor/input-editor.component';
 import { InputFieldComponent } from './input-field/input-field.component';
 import { LayoutFormComponent } from './layout-form/layout-form.component';
 import { MaterialModule } from './material.module';
+import { ListViewComponent } from './list-view/list-view.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { MaterialModule } from './material.module';
       LayoutFormComponent,
       DynamicFieldDirective,
       InputFieldComponent,
+      ListViewComponent,
   ],
   entryComponents : [
   ]
