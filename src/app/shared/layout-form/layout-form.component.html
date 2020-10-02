@@ -5,5 +5,5 @@
       <!-- <dynamic-component [config]="field" [formGroup]="form"></dynamic-component> -->
     </div>
     <button mat-raised-button  color="primary" (click)="onSave()">Save</button>
-    <div>{{form.values}}</div>
+    <div>{{values | json}}</div>
   </form>

@@ -11,12 +11,11 @@ export class LayoutFormComponent implements OnInit {
   @Input()
   config: FormConfig;
   form: FormGroup;
-
+  values:any;
   constructor(private fb: FormBuilder ) { }
 
   ngOnInit(): void {
     this.form = this.createFormGroup();
-    console.log(this.form);
   }
 
 
@@ -35,8 +34,7 @@ export class LayoutFormComponent implements OnInit {
   }
 
   public onSave = ()=> {
-    debugger;
-    console.log(this.form);
+    this.values = this.form.value;
   }
 
 }
