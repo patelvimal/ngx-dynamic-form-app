@@ -33,9 +33,16 @@ export class AppComponent {
             selectMultiple: true,
             options: ['Sunday','Monday','Tuesday']
         }
+        const fileUpload: FormField = {
+            label: 'ProfilePic',
+            name: 'profilePic',
+            value:'',
+            type: FieldType.FileUpload,
+        }
+
         this.formConfiguration = {
             formName: "Sample Form",
-            fields: [myTextBox,myList,myEditor],
+            fields: [myTextBox,fileUpload,myList,myEditor],
             actions: []
         }
     }

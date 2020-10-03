@@ -8,6 +8,7 @@ import { InputFieldComponent } from './input-field/input-field.component';
 import { LayoutFormComponent } from './layout-form/layout-form.component';
 import { MaterialModule } from './material.module';
 import { ListViewComponent } from './list-view/list-view.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { ListViewComponent } from './list-view/list-view.component';
       DynamicFieldDirective,
       InputFieldComponent,
       ListViewComponent,
+      FileUploadComponent,
   ],
   entryComponents : [
   ]

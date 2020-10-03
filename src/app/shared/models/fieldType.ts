@@ -4,5 +4,6 @@ export enum FieldType {
     Editor,
     Dropdown,
     Radio,
-    ListView
+    ListView,
+    FileUpload
 }
