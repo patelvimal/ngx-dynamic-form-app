@@ -1,7 +1,7 @@
 import { Directive, Input, OnInit, Output } from '@angular/core';
-import { FormGroup, AbstractControl, FormBuilder } from '@angular/forms';
-import { FieldType } from './models/fieldType';
-import { ItemType } from './models/ItemType';
+import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
+import { FieldType } from '../models/fieldType';
+import { ItemType } from '../models/ItemType';
 
 @Directive()
 export class BaseControlComponent implements OnInit {

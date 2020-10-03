@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { FieldType } from './shared/models/fieldType';
-import { FormConfig } from './shared/models/formConfig';
-import { FormField } from './shared/models/formField';
+import { FieldType } from 'projects/core-framework/src/lib/models/fieldType';
+import { FormConfig } from 'projects/core-framework/src/lib/models/formConfig';
+import { FormField } from 'projects/core-framework/src/lib/models/formField';
 
 @Component({
     selector: 'app-root',

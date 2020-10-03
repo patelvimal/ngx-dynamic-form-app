@@ -1,7 +1,6 @@
 import { Component, ElementRef, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { BaseControlComponent } from '../base.component';
-import { ItemType } from '../models/ItemType';
 
 @Component({
 	selector: 'list-view',

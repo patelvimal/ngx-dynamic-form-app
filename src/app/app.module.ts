@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { QuillModule } from 'ngx-quill';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from 'projects/core-framework/src/lib/material.module';
+import { CoreFrameworkModule } from 'projects/core-framework/src/public-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { MaterialModule } from './shared/material.module';
 
 
 @NgModule({
@@ -17,10 +16,9 @@ import { MaterialModule } from './shared/material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
-    MaterialModule,
-    QuillModule.forRoot(),
-    BrowserAnimationsModule  
+    CoreFrameworkModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

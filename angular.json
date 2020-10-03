@@ -127,6 +127,46 @@
           }
         }
       }
+    },
+    "core-framework": {
+      "projectType": "library",
+      "root": "projects/core-framework",
+      "sourceRoot": "projects/core-framework/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/core-framework/tsconfig.lib.json",
+            "project": "projects/core-framework/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/core-framework/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/core-framework/src/test.ts",
+            "tsConfig": "projects/core-framework/tsconfig.spec.json",
+            "karmaConfig": "projects/core-framework/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/core-framework/tsconfig.lib.json",
+              "projects/core-framework/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "my-editor-app"

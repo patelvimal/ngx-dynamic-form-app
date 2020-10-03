@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { FormConfig } from '../models/formConfig';
+import { FormConfig } from '../../models/formConfig';
 
 @Component({
   selector: 'layout-form',

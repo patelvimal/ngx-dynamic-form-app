@@ -1,12 +1,12 @@
 import { ComponentFactoryResolver, ComponentRef, Directive, Input, ViewContainerRef } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { BaseControlComponent } from '../base.component';
-import { FileUploadComponent } from '../file-upload/file-upload.component';
-import { InputEditorComponent } from '../input-editor/input-editor.component';
-import { InputFieldComponent } from '../input-field/input-field.component';
-import { ListViewComponent } from '../list-view/list-view.component';
-import { FieldType } from '../models/fieldType';
-import { FormField } from '../models/formField';
+import { BaseControlComponent } from '../../components/base.component';
+import { FileUploadComponent } from '../../components/file-upload/file-upload.component';
+import { InputEditorComponent } from '../../components/input-editor/input-editor.component';
+import { InputFieldComponent } from '../../components/input-field/input-field.component';
+import { ListViewComponent } from '../../components/list-view/list-view.component';
+import { FieldType } from '../../models/fieldType';
+import { FormField } from '../../models/formField';
 
 @Directive({
     selector: '[dynamicField]'

@@ -2,19 +2,18 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QuillModule } from 'ngx-quill';
-import { DynamicFieldDirective } from './dynamic-field/dynamic-field.directive';
-import { InputEditorComponent } from './input-editor/input-editor.component';
-import { InputFieldComponent } from './input-field/input-field.component';
-import { LayoutFormComponent } from './layout-form/layout-form.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { InputEditorComponent } from './components/input-editor/input-editor.component';
+import { InputFieldComponent } from './components/input-field/input-field.component';
+import { LayoutFormComponent } from './components/layout-form/layout-form.component';
+import { ListViewComponent } from './components/list-view/list-view.component';
+import { DynamicFieldDirective } from './directives/dynamic-field/dynamic-field.directive';
 import { MaterialModule } from './material.module';
-import { ListViewComponent } from './list-view/list-view.component';
-import { FileUploadComponent } from './file-upload/file-upload.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    MaterialModule,
     ReactiveFormsModule,
     QuillModule.forRoot()  
   ],
@@ -33,4 +32,4 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
   entryComponents : [
   ]
 })
-export class SharedModule { }
+export class CoreFrameworkModule { }
