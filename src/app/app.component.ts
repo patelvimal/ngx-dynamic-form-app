@@ -14,10 +14,17 @@ export class AppComponent {
     
     constructor() {
         const myTextBox: FormField = {
-            label: 'Name',
+            label: 'First Name',
             name: 'firstName',
             value:'',
             type: FieldType.TextBox
+        };
+        const lastName: FormField = {
+            label: 'Last Name',
+            name: 'lastName',
+            value:'',
+            type: FieldType.TextBox,
+            disabled:true
         };
         const myEditor: FormField = {
             label: 'Description',
@@ -42,7 +49,7 @@ export class AppComponent {
 
         this.formConfiguration = {
             formName: "Sample Form",
-            fields: [myTextBox,fileUpload,myList,myEditor],
+            fields: [myTextBox,lastName, fileUpload,myList,myEditor],
             actions: []
         }
     }

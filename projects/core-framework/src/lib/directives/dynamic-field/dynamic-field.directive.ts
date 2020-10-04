@@ -33,6 +33,7 @@ export class DynamicFieldDirective {
         component.instance.value = this.config.value;
         component.instance.group = this.formGroup;
         component.instance.options = this.config.options;
+        component.instance.disabled = this.config.disabled;
         component.instance.selectMultiple = this.config.selectMultiple;
         
     }

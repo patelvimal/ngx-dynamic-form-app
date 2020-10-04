@@ -15,6 +15,7 @@ import { MaterialModule } from './material.module';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    MaterialModule,
     QuillModule.forRoot()  
   ],
   exports :[
