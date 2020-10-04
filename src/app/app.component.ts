@@ -17,7 +17,8 @@ export class AppComponent {
             label: 'First Name',
             name: 'firstName',
             value:'',
-            type: FieldType.TextBox
+            type: FieldType.TextBox,
+            isRequired: true
         };
         const lastName: FormField = {
             label: 'Last Name',

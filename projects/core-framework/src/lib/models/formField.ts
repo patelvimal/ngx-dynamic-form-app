@@ -9,5 +9,6 @@ export interface FormField {
     placeholder?: string,
     value?: string,
     options?: Array<ItemType> | Array<string>,
-    selectMultiple?: boolean
+    selectMultiple?: boolean;
+    isRequired?: boolean
 }

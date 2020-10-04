@@ -35,7 +35,7 @@ export class DynamicFieldDirective {
         component.instance.options = this.config.options;
         component.instance.disabled = this.config.disabled;
         component.instance.selectMultiple = this.config.selectMultiple;
-        
+        component.instance.isRequired = this.config.isRequired;
     }
 
     private getComponent = (type: FieldType) => {

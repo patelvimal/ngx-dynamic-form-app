@@ -20,6 +20,9 @@ export class BaseControlComponent implements OnInit {
     @Input()
     disabled: boolean;
 
+    @Input()
+    isRequired: boolean;
+
     @Output()
     selectedItems: Array<ItemType>;
     @Output()
@@ -40,11 +43,15 @@ export class BaseControlComponent implements OnInit {
         this.value = this.value || '';
         this.disabled = this.disabled || false;
         this.control = this.group.get(this.name);
+        this.isRequired = this.isRequired || false;
         //this.group = this.group || this.fb.group({ [this.name]: '' });
     }
 
     getErrorMessage() {
-        return "";
+        if (this.isRequired && !this.value) {
+            return `${this.label} is required.`;
+        }
+        
         // if (this.name.hasError('required')) {
         //   return 'You must enter a value';
         // }
