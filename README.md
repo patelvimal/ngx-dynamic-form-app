@@ -1,5 +1,5 @@
 ## ngx-dynamic-form-app
-This angular library is for creating angular forms dynamically based on configuration provided by the application.
+Create angular forms dynamically based on json configuration
 
 
 ### Clone, Install and Run 
